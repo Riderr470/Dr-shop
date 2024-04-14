@@ -18,6 +18,7 @@ Dr. shop is an open source experimental ecommerce system desighned to practice a
 ## Packeges Used
 
 -   laravel-debugbar
+-   laravel medialibrary
 -   laravel ide helper
 -   redis
 
