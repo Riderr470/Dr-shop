@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name', 80)->unique();
             $table->string('slug', 80)->unique();
             $table->string('image');
             $table->unsignedInteger('category_id')->default(0);
             $table->timestamps();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

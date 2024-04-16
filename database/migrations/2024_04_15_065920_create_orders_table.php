@@ -28,6 +28,7 @@ return new class extends Migration
             $table->unsignedInteger('processed_by');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('processed_by')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
