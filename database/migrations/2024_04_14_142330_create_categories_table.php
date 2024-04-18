@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name', 80)->unique();
             $table->string('slug', 80)->unique();
             $table->string('image');
-            $table->unsignedInteger('category_id')->default(0);
+            $table->unsignedInteger('category_id')->nullable();
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });

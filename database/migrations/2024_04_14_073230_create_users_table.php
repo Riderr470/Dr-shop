@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('phone', 32)->unique();
             $table->string('password', 128);
             $table->bigInteger('reward_points')->default(0);
-            $table->string('status');
+            $table->string('status')->default('active');
             $table->date('email_varified_at')->nullable();
             $table->string('email_varification_token')->nullable();
             $table->string('facebook_id', 32)->nullable();
